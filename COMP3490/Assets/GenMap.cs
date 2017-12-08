@@ -18,6 +18,9 @@ public class GenMap : MonoBehaviour {
     private bool justWentLeft = false;
     private bool justWentRight = false;
 
+    private List<int> currentRow = new List<int>();
+    private List<int> previousRow = new List<int>();
+
     void Start()
     {
         GenerateMap();
@@ -36,6 +39,7 @@ public class GenMap : MonoBehaviour {
 
         for (int x = 0; x < mapSize; x++)
         {
+            
             int tempRand = pseudoRandom.Next(0, 100);
             if (tempRand > 75)
             {
@@ -76,24 +80,29 @@ public class GenMap : MonoBehaviour {
     {
         xCoord += sizeX;
         placeTile(xCoord, zCoord);
+        currentRow.Add(xCoord);
     }
 
     void addTileLeft()
     {
         xCoord -= sizeX;
         placeTile(xCoord, zCoord);
+        currentRow.Add(xCoord);
     }
 
     void addTileForward()
     {
         zCoord += sizeX;
         placeTile(xCoord, zCoord);
+        addWalls();
+        previousRow.Clear();
+        previousRow.AddRange(currentRow);
+        currentRow.Clear();
     }
 
-    void addTileBackward()
+    void addWalls()
     {
-        zCoord -= sizeX;
-        placeTile(xCoord, zCoord);
+        //Make comparisons between previous row and current row which determine where to place walls
     }
 
     void placeTile(int x, int z)

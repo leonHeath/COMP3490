@@ -99,8 +99,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 304567449}
-  - component: {fileID: 304567448}
-  - component: {fileID: 304567447}
   - component: {fileID: 304567446}
   m_Layer: 0
   m_Name: GameMap
@@ -125,30 +123,6 @@ MonoBehaviour:
   mapSize: 100
   seed: bozo
   floor: {fileID: 4245590436038536, guid: cc27590f31a026a4481b2a7d2cfa72b0, type: 2}
---- !u!114 &304567447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304567445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdd1d26d69712af4ca243de8d85abbb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sizeX: 0
-  sizeZ: 0
---- !u!114 &304567448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 304567445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62f04a7bea47af4d86b0b8ddff0551f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &304567449
 Transform:
   m_ObjectHideFlags: 0

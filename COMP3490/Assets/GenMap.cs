@@ -15,6 +15,9 @@ public class GenMap : MonoBehaviour {
 
     private enum direction {Left, Forward, Right, Backward};
 
+    private bool justWentLeft = false;
+    private bool justWentRight = false;
+
     void Start()
     {
         GenerateMap();
@@ -27,7 +30,7 @@ public class GenMap : MonoBehaviour {
 
     void GenerateMap()
     {
-
+        
         Debug.Log("Generating map");
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
 
@@ -36,19 +39,34 @@ public class GenMap : MonoBehaviour {
             int tempRand = pseudoRandom.Next(0, 100);
             if (tempRand > 75)
             {
-                addTileRight();
+                if (justWentLeft)
+                {
+                    addTileLeft();
+                }
+                else
+                {
+                    addTileRight();
+                    justWentRight = true;
+                }
+                
             }
-            else if(tempRand > 50)
+            else if (tempRand > 50)
             {
-                addTileLeft();
-            }
-            else if (tempRand > 25)
-            {
-                addTileForward();
+                if (justWentRight)
+                {
+                    addTileRight();
+                }
+                else
+                {
+                    addTileLeft();
+                    justWentLeft = true;
+                }
             }
             else
             {
                 addTileForward();
+                justWentRight = false;
+                justWentLeft = false;
             }
 
         }

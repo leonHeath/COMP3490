@@ -36,6 +36,7 @@ public class GenMap : MonoBehaviour {
         
         Debug.Log("Generating map");
         System.Random pseudoRandom = new System.Random(seed.GetHashCode());
+        placeTile(0, 0);
 
         for (int x = 0; x < mapSize; x++)
         {

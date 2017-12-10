@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 89edca259412a4746b08d24aa593f30f
 timeCreated: 1512784565
 licenseType: Free
+=======
+guid: e574a09a0f66d3948856c8b5d0808b45
+timeCreated: 1446041553
+licenseType: Store
+>>>>>>> master
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -22,7 +28,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: torches
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 069f9975ac1711249922b7e43e493948, type: 2}
+=======
+    second: {fileID: 2100000, guid: cbe193a6a017d514bbbc40d74b1d3655, type: 2}
+>>>>>>> master
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,10 +65,17 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+<<<<<<< HEAD
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+=======
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+>>>>>>> master
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -73,8 +90,13 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
+<<<<<<< HEAD
     tangentImportMode: 3
     normalCalculationMode: 4
+=======
+    tangentImportMode: 4
+    normalCalculationMode: 0
+>>>>>>> master
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -92,7 +114,11 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
+<<<<<<< HEAD
     skeletonHasParents: 1
+=======
+    skeletonHasParents: 0
+>>>>>>> master
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1

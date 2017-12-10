@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 22622f40c9764d2499633fdb5e78f262
+timeCreated: 1512784565
+licenseType: Free
+=======
 guid: 81cf10a1c3dde1b4a8f980cb1393f726
 timeCreated: 1446040865
 licenseType: Store
+>>>>>>> master
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -25,17 +31,29 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door
+<<<<<<< HEAD
+    second: {fileID: 2100000, guid: 53d6374904158bf4a93c3ca520cf329d, type: 2}
+=======
     second: {fileID: 2100000, guid: 58fb432990aed584cae65f823e1a2ed8, type: 2}
+>>>>>>> master
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: gateway
+<<<<<<< HEAD
+    second: {fileID: 2100000, guid: 5b95f25c051b6b443ad4f530813f03ab, type: 2}
+=======
     second: {fileID: 2100000, guid: ca79cd31e39ef65419c9a1b67049d2c1, type: 2}
+>>>>>>> master
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: rocks1
+<<<<<<< HEAD
+    second: {fileID: 2100000, guid: 44a9993b1af1e1340b662899289b701c, type: 2}
+=======
     second: {fileID: 2100000, guid: 5a29ec1522ed6494fae773d72de53a77, type: 2}
+>>>>>>> master
   materials:
     importMaterials: 1
     materialName: 0
@@ -68,10 +86,17 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+<<<<<<< HEAD
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+=======
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+>>>>>>> master
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -86,8 +111,13 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
+<<<<<<< HEAD
+    tangentImportMode: 3
+    normalCalculationMode: 4
+=======
     tangentImportMode: 4
     normalCalculationMode: 0
+>>>>>>> master
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -105,7 +135,11 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
+<<<<<<< HEAD
+    skeletonHasParents: 1
+=======
     skeletonHasParents: 0
+>>>>>>> master
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1

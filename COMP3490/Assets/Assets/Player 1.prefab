@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4222433067753826}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1735209818126576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.354206, y: 6.6111164, z: -25.90163}
+  m_LocalPosition: {x: -6.354206, y: 0, z: -25.90163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4222433067753826}
@@ -98,8 +98,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847496462756380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4215430127648048}
   m_Father: {fileID: 4093216894663508}
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a28b7597cf4d7e48be21308db68bdf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   jumpSpeed: 5
   gravity: 20
   cc: {fileID: 143298410967490092}

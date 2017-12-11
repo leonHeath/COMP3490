@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour {
     public float gravity = 10;
 
     public CharacterController cc;
+
+    private Vector3 movement;
+
     //public Camera cam;
 
     // Use this for initialization
@@ -23,14 +26,24 @@ public class PlayerController : MonoBehaviour {
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        movement = transform.TransformDirection(movement);
 
-        if (Input.GetButton("Jump"))
-            movement.y = jumpSpeed;
+        if (cc.isGrounded)
+        {
+
+            movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+
+
+            movement = transform.TransformDirection(movement);
+
+
+
+            if (Input.GetButton("Jump"))
+                movement.y = jumpSpeed;
+                
+        }
 
         movement.y -= gravity * Time.deltaTime;
 

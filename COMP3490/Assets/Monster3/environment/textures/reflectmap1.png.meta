@@ -1,10 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 3147427f48dd72c408e5337d28a42f74
+timeCreated: 1512784515
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+=======
 guid: a7ba9fb718777e54cbeb72cf4496cd33
 timeCreated: 1445894350
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName:
     8900000: generatedCubemap
+>>>>>>> master
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -25,19 +33,32 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
+<<<<<<< HEAD
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+=======
   generateCubemap: 2
   cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -1
+>>>>>>> master
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
+<<<<<<< HEAD
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+=======
     wrapU: 1
     wrapV: 1
     wrapW: 1
+>>>>>>> master
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -52,7 +73,11 @@ TextureImporter:
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
+<<<<<<< HEAD
+  textureShape: 1
+=======
   textureShape: 2
+>>>>>>> master
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0

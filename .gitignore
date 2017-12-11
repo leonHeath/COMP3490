@@ -33,5 +33,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+COMP3490/Library/shadercompiler-UnityShaderCompiler.exe0.log
 *.ide-shm
 *.ide-wal

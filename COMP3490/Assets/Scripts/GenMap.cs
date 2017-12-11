@@ -13,7 +13,7 @@ public class GenMap : MonoBehaviour {
 
     private int xCoord = 0, zCoord = 0;
 
-    private enum direction {Left, Forward, Right, Backward};
+    //private enum direction {Left, Forward, Right, Backward};
 
     private bool justWentLeft = false;
     private bool justWentRight = false;

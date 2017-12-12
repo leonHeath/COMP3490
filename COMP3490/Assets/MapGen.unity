@@ -144,6 +144,7 @@ MonoBehaviour:
   mapSize: 100
   seed: bozo
   floor: {fileID: 4245590436038536, guid: cc27590f31a026a4481b2a7d2cfa72b0, type: 2}
+  wall: {fileID: 4374851543553306, guid: eef6afea3808c264390240f643be0211, type: 2}
 --- !u!4 &304567449
 Transform:
   m_ObjectHideFlags: 0

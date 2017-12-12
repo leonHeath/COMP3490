@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 8ed1075d043f39441905ef42f65d8c18
+timeCreated: 1512784567
+licenseType: Free
+=======
 guid: dfa9dd007e9fedc4b869bfd63bb3b284
 timeCreated: 1446059246
 licenseType: Store
+>>>>>>> master
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -186,6 +192,9 @@ ModelImporter:
     400176: spinecontrol
     400178: tip
     4300000: mesh_1
+<<<<<<< HEAD
+    7400000: Main
+=======
     7400000: creature1Idle
     7400002: creature1walkforward
     7400004: creature1walkright
@@ -204,6 +213,7 @@ ModelImporter:
     7400030: creature1Die
     7400032: creature1Spawn
     7400034: allAnimations
+>>>>>>> master
     9500000: //RootNode
     13700000: mesh_1
   externalObjects:
@@ -211,7 +221,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat
+<<<<<<< HEAD
+    second: {fileID: 2100000, guid: 3a4c340f3422d3a42bb633c218a14a11, type: 2}
+=======
     second: {fileID: 2100000, guid: 018ae001684c7a048b29b33d0c89a449, type: 2}
+>>>>>>> master
   materials:
     importMaterials: 1
     materialName: 0
@@ -237,6 +251,9 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
+    clipAnimations: []
+=======
     clipAnimations:
     - serializedVersion: 16
       name: creature1Idle
@@ -3774,16 +3791,24 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+>>>>>>> master
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+<<<<<<< HEAD
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+=======
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+>>>>>>> master
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -3798,8 +3823,13 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
+<<<<<<< HEAD
+    tangentImportMode: 3
+    normalCalculationMode: 4
+=======
     tangentImportMode: 4
     normalCalculationMode: 0
+>>>>>>> master
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -3817,7 +3847,11 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
+<<<<<<< HEAD
+    skeletonHasParents: 1
+=======
     skeletonHasParents: 0
+>>>>>>> master
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: b2cacfd8a92aaec48b4a493ad86fa83a
+timeCreated: 1512784537
+licenseType: Free
+=======
 guid: e642eb8f656d5d2449a458450cfab2c1
 timeCreated: 1446059344
 licenseType: Store
+>>>>>>> master
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -27,7 +33,11 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
+<<<<<<< HEAD
+  textureFormat: 1
+=======
   textureFormat: -1
+>>>>>>> master
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2

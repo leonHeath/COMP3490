@@ -56,7 +56,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
+<<<<<<< HEAD:COMP3490/Assets/Assets/floor/floor1.prefab
   - {fileID: 2100000, guid: 35fc0bb8c874eba48b22f60d878ffbe4, type: 2}
+=======
+  - {fileID: 2100000, guid: 37db27cd90bcb064daf2429fa42e022f, type: 2}
+>>>>>>> master:COMP3490/Assets/Assets/Floor.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

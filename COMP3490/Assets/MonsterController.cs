@@ -6,44 +6,57 @@ public class MonsterController : MonoBehaviour {
 
     public Animator anim;
 
-    private bool followPlayer;
+    public int monsterSpeed;
+
+    public Transform Player;
+
+    private Transform monsterTransform;
+
+    //These are set by child scripts
+    public bool followPlayer;
+    public bool inRange;
+    public bool monsterDead;
 
     // Use this for initialization
     void Start () {
         anim.GetComponent<Animator>();
-	}
+        monsterTransform = transform;
+        Player = GameObject.FindWithTag("Player").transform;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (followPlayer)
+        if (followPlayer && !monsterDead)
         {
-            anim.SetFloat("Speed", 3);
+            //Look at player leaving x and z values stationary
+            transform.LookAt(Player);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+            anim.SetFloat("Speed", monsterSpeed);
         }
         else
         {
             anim.SetFloat("Speed", 0);
         }
+        if (monsterDead)
+        {
+            anim.SetBool("Dead", true);
+        }
+        if (inRange)
+        {
+            anim.SetBool("HitPlayer", true);
+            anim.SetFloat("Speed", 0);
+        }
+        else
+        {
+            anim.SetBool("HitPlayer", false);
+        }
+
 	}
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Collider>().tag == Player.tag)
-            followPlayer = true;
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<Collider>().tag == Player.tag)
-            followPlayer = false;
-    }
 
     void OnAnimatorMove()
     {
-        Vector3 newPosition = transform.position;
-        newPosition.z -= anim.GetFloat("Speed") * Time.deltaTime;
+        Vector3 newPosition = monsterTransform.position;
+        newPosition += monsterTransform.forward * anim.GetFloat("Speed") * Time.deltaTime;
         transform.position = newPosition;
-       
     }
-
 }

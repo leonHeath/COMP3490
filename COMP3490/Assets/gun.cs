@@ -43,12 +43,13 @@ public class gun : MonoBehaviour {
 		GameObject temporaryBulletHandler;
 		temporaryBulletHandler = Instantiate (bullet, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
 
+        //Performs rotation on bullet handler
 		temporaryBulletHandler.transform.Rotate (Vector3.left * 90);
 
 		Rigidbody bulletClone;
 		bulletClone = temporaryBulletHandler.GetComponent<Rigidbody> ();
 
-		bulletClone.AddForce(transform.forward * speed);
+		bulletClone.AddForce(transform.right * speed * -1);
 
 		Destroy (temporaryBulletHandler, 1.0f);
 	}

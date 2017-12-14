@@ -56,8 +56,8 @@ MonoBehaviour:
   sizeZ: 10
   mapSize: 100
   seed: bozo
-  floor: {fileID: 4245590436038536, guid: 55d65c04992ed7546a213a36c9d1d806, type: 2}
-  ceiling: {fileID: 4851596460787714, guid: e42a9302381be684785d65fb11467128, type: 2}
+  floor: {fileID: 4073008686870660, guid: 6aab4f552c2372a41b9c1c4392848f5e, type: 2}
+  ceiling: {fileID: 4650412889413690, guid: 5d8e75150640bee47810e1a05f84b060, type: 2}
   walls:
   - {fileID: 4108215276349062, guid: 493e2b573fe5cd2448ef30912917562f, type: 2}
   - {fileID: 4087864779382446, guid: d7b74659a94460649992933cd065b839, type: 2}

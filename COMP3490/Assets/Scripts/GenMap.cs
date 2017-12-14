@@ -15,6 +15,8 @@ public class GenMap : MonoBehaviour {
 
     public Transform[] walls = new Transform[2];
 
+    public Transform monster;
+
     private int xCoord = 0, zCoord = 0;
 
     private bool justWentLeft = false;
@@ -81,6 +83,10 @@ public class GenMap : MonoBehaviour {
                 addTileForward();
                 justWentRight = false;
                 justWentLeft = false;
+            }
+            if(x > 5)
+            {
+                spawnMonster(xCoord, zCoord);
             }
         }
         addEndWalls();
@@ -242,4 +248,12 @@ public class GenMap : MonoBehaviour {
 
         Instantiate(walls[i], new Vector3(x, sizeY / 2, z), Quaternion.Euler(0, rotation, 0));
     }
+
+    void spawnMonster(int x, int z)
+    {
+        int tempRand = pseudoRandom.Next(0, 100);
+        if (tempRand > 80)
+            Instantiate(monster, new Vector3(x, 0, z), Quaternion.Euler(0, 180, 0));
+    }
+
 }

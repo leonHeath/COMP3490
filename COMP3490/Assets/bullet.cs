@@ -10,7 +10,7 @@ public class bullet : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Enemy")) 
 		{
 			other.gameObject.SetActive (false);
-			gameObject.SetActive (false);
+			//gameObject.SetActive (false);
 
 		}
 	}

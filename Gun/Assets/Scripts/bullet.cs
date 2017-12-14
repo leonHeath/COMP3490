@@ -7,11 +7,10 @@ public class bullet : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if (other.gameObject.CompareTag ("Enemy")) 
-		{
-			other.gameObject.SetActive (false);
+		//if (other.gameObject.CompareTag ("Enemy")) 
+		//{
 			gameObject.SetActive (false);
 
-		}
+		//}
 	}
 }

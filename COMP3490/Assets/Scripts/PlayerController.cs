@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public int health = 3;
     public float speed;
-
     public float jumpSpeed;
-
     public float gravity = 10;
 
     public CharacterController cc;
@@ -51,5 +50,10 @@ public class PlayerController : MonoBehaviour {
 
         cc.Move(movement * speed * run * Time.deltaTime);
         //rb.velocity = movement * speed;
+    }
+
+    public void takeDamage()
+    {
+        health--;
     }
 }

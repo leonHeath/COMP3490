@@ -35,8 +35,8 @@ public class gun : MonoBehaviour {
 		if (Physics.Raycast (fpsCam.transform.position, fpsCam.transform.forward, out hit, range)) {
 			Debug.Log (hit.transform.name);
 			if (hit.collider.tag == "Enemy") {
-				Enemy enemy = hit.collider.GetComponent<Enemy> ();
-				enemy.health -= 1;
+				//Enemy enemy = hit.collider.GetComponent<Enemy> ();
+				//enemy.health -= 1;
 			}
 		}
 

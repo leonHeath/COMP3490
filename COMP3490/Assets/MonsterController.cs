@@ -6,6 +6,8 @@ public class MonsterController : MonoBehaviour {
 
     public Animator anim;
 
+    private bool followPlayer;
+
     // Use this for initialization
     void Start () {
         anim.GetComponent<Animator>();
@@ -13,8 +15,28 @@ public class MonsterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        anim.SetFloat("Speed", 3);
+        if (followPlayer)
+        {
+            anim.SetFloat("Speed", 3);
+        }
+        else
+        {
+            anim.SetFloat("Speed", 0);
+        }
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Collider>().tag == Player.tag)
+            followPlayer = true;
+
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Collider>().tag == Player.tag)
+            followPlayer = false;
+    }
 
     void OnAnimatorMove()
     {

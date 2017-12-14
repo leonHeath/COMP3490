@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour {
 
+    //New
+    public int health;
+    public AudioClip hitSound;
+    public AudioClip dieSound;
+    private AudioSource source;
+
     public Animator anim;
 
     public int monsterSpeed;
@@ -17,8 +23,14 @@ public class MonsterController : MonoBehaviour {
     public bool inRange;
     public bool monsterDead;
 
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     // Use this for initialization
     void Start () {
+        
         anim.GetComponent<Animator>();
         monsterTransform = transform;
         Player = GameObject.FindWithTag("Player").transform;
@@ -37,13 +49,22 @@ public class MonsterController : MonoBehaviour {
         {
             anim.SetFloat("Speed", 0);
         }
+        if(health <= 0)
+        {
+            monsterDead = true;
+        }
         if (monsterDead)
         {
-            anim.SetBool("Dead", true);
+            GetComponent<CharacterController>().enabled = false;
+            anim.SetBool("Dead", true); 
         }
         if (inRange)
         {
             anim.SetBool("HitPlayer", true);
+            if (!monsterDead)
+            {
+                damagePlayer();
+            }
             anim.SetFloat("Speed", 0);
         }
         else
@@ -52,6 +73,21 @@ public class MonsterController : MonoBehaviour {
         }
 
 	}
+
+    void damagePlayer()
+    {
+        Player.GetComponent<PlayerController>().takeDamage();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("Monster SHot");
+            source.PlayOneShot(hitSound, 1f);
+            health -= 1;
+        }
+    }
 
     void OnAnimatorMove()
     {

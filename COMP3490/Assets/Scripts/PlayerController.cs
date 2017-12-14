@@ -35,11 +35,7 @@ public class PlayerController : MonoBehaviour {
 
             movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-
-
             movement = transform.TransformDirection(movement);
-
-
 
             if (Input.GetButton("Jump"))
                 movement.y = jumpSpeed;

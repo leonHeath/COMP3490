@@ -547,7 +547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2000
-  speed: 5
+  walkSpeed: 5
+  runSpeed: 10
   jumpSpeed: 4
   gravity: 10
   cc: {fileID: 143207472500464140}

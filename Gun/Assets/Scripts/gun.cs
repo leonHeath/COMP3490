@@ -8,37 +8,53 @@ public class gun : MonoBehaviour {
 	public float damage = 10f;
 	public float range = 100f;
 	public float speed;
+	public float ammo;
+	public float capacity = 6f;
+
+
+	public AudioClip shotSound;
+	public AudioClip reloadSound;
 
 	public Camera fpsCam;
 	public GameObject bullet;
 	public GameObject bulletEmitter;
+
+	private AudioSource source;
 //	public Light flash;
 
-//	void Start()
-//	{
+	void Start()
+	{
+		source = GetComponent<AudioSource> ();
+		ammo = capacity;
 		//flash = GetComponent<Light>();
-//	}
+	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Fire1")) 
+		if (Input.GetButtonDown ("Fire1") && ammo > 0) 
 		{
+			source.PlayOneShot (shotSound,1F);
 			Shoot ();
 			//flash.enabled = !flash.enabled;
 			//Flash ();
+		}
+		if (Input.GetKeyDown (KeyCode.R) && ammo < capacity) 
+		{
+			source.PlayOneShot (reloadSound,1F);
+			Reload ();
 		}
 	}
 
 	void Shoot()
 	{
-		RaycastHit hit;
-		if (Physics.Raycast (fpsCam.transform.position, fpsCam.transform.forward, out hit, range)) {
-			Debug.Log (hit.transform.name);
-			if (hit.collider.tag == "Enemy") {
-				Enemy enemy = hit.collider.GetComponent<Enemy> ();
-				enemy.health -= 1;
-			}
-		}
+		//RaycastHit hit;
+		//if (Physics.Raycast (fpsCam.transform.position, fpsCam.transform.forward, out hit, range)) {
+		//	Debug.Log (hit.transform.name);
+		//	if (hit.collider.tag == "Enemy") {
+		//		Enemy enemy = hit.collider.GetComponent<Enemy> ();
+		//		enemy.health -= 1;
+		//	}
+		//}
 
 		GameObject temporaryBulletHandler;
 		temporaryBulletHandler = Instantiate (bullet, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
@@ -48,9 +64,16 @@ public class gun : MonoBehaviour {
 		Rigidbody bulletClone;
 		bulletClone = temporaryBulletHandler.GetComponent<Rigidbody> ();
 
-		bulletClone.AddForce(transform.forward * speed);
+		bulletClone.AddForce((transform.right*-1) * speed);
 
 		Destroy (temporaryBulletHandler, 1.0f);
+
+		ammo -= 1;
+	}
+
+	void Reload()
+	{
+		ammo = 6;
 	}
 
 	//void Flash()

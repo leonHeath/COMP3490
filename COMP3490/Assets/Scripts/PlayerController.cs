@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public int health = 3;
-    public float speed;
+    public float walkSpeed;
+    public float runSpeed;
     public float jumpSpeed;
     public float gravity = 10;
 
@@ -13,14 +14,12 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 movement;
 
-    private int run;
-
-    //public Camera cam;
+    private float speed;
 
     // Use this for initialization
     void Start () {
         cc.GetComponent<CharacterController>();
-        run = 1;
+        speed = walkSpeed;
     }
 	
 	// Update is called once per frame
@@ -40,15 +39,15 @@ public class PlayerController : MonoBehaviour {
                 movement.y = jumpSpeed;
 
             if (Input.GetButton("Run"))
-                run = 2;
+                speed = runSpeed;
             else
-                run = 1;
+                speed = walkSpeed;
                 
         }
 
         movement.y -= gravity * Time.deltaTime;
 
-        cc.Move(movement * speed * run * Time.deltaTime);
+        cc.Move(movement * speed * Time.deltaTime);
         //rb.velocity = movement * speed;
     }
 

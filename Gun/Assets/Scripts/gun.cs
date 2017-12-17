@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI; 
 using UnityEngine;
 using System;
 
@@ -10,6 +11,7 @@ public class gun : MonoBehaviour {
 	public float speed;
 	public float ammo;
 	public float capacity = 6f;
+	public Text ammoDisplay;
 
 
 	public AudioClip shotSound;
@@ -26,6 +28,7 @@ public class gun : MonoBehaviour {
 	{
 		source = GetComponent<AudioSource> ();
 		ammo = capacity;
+		SetAmmo ();
 		//flash = GetComponent<Light>();
 	}
 
@@ -69,11 +72,18 @@ public class gun : MonoBehaviour {
 		Destroy (temporaryBulletHandler, 1.0f);
 
 		ammo -= 1;
+		SetAmmo ();
 	}
 
 	void Reload()
 	{
-		ammo = 6;
+		ammo = capacity;
+		SetAmmo ();
+	}
+
+	void SetAmmo()
+	{
+		ammoDisplay.text = ammo.ToString () + "| " + capacity.ToString ();
 	}
 
 	//void Flash()

@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour {
 
 		if (health <= 0) 
 		{
-			//source.PlayOneShot (dieSound);
 			Destroy (gameObject);
 		}
 	}

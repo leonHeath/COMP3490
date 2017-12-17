@@ -127,7 +127,6 @@ public class GenMap : MonoBehaviour {
     {
         for (int i = currentRow[0]; i <= currentRow[currentRow.Count - 1]; i += sizeX)
         {
-            //Instantiate(wall, new Vector3(i, sizeY / 2, zCoord - sizeZ / 2), Quaternion.identity);
             placeWall(i, zCoord - sizeZ / 2, 0);
         }
     }
@@ -144,7 +143,6 @@ public class GenMap : MonoBehaviour {
             {
                 for (int i = previousRow[0]; i < currentRow[0]; i += sizeX)
                 {
-                    //Instantiate(wall, new Vector3(i, sizeY / 2, zCoord - sizeZ / 2), Quaternion.identity);
                     placeWall(i, zCoord - sizeZ / 2, 180);
                 }
             }
@@ -152,7 +150,6 @@ public class GenMap : MonoBehaviour {
             {
                 for (int i = currentRow[0]; i < previousRow[0]; i += sizeX)
                 {
-                    //Instantiate(wall, new Vector3(i, sizeY / 2, zCoord - sizeZ / 2), Quaternion.identity);
                     placeWall(i, zCoord - sizeZ / 2, 0);
                 }
             }
@@ -160,7 +157,6 @@ public class GenMap : MonoBehaviour {
             {
                 for (int i = currentRow[currentRow.Count - 1]; i > previousRow[previousRow.Count - 1]; i -= sizeX)
                 {
-                    // Instantiate(wall, new Vector3(i, sizeY / 2, zCoord - sizeZ / 2), Quaternion.identity);
                     placeWall(i, zCoord - sizeZ / 2, 0);
                 }
             }
@@ -168,7 +164,6 @@ public class GenMap : MonoBehaviour {
             {
                 for (int i = previousRow[previousRow.Count - 1]; i > currentRow[currentRow.Count - 1]; i -= sizeX)
                 {
-                    //Instantiate(wall, new Vector3(i, sizeY / 2, zCoord - sizeZ / 2), Quaternion.identity);
                     placeWall(i, zCoord - sizeZ / 2, 180);
                 }
             }
@@ -185,12 +180,10 @@ public class GenMap : MonoBehaviour {
 
             //Add wall to the left side of pathway
             x = previousRow[0];
-            //Instantiate(wall, new Vector3(x - sizeX /2, sizeY / 2, zCoord - sizeZ), Quaternion.Euler(0, 90, 0));
             placeWall(x - sizeX / 2, zCoord - sizeZ, 90);
 
             //Add wall to the right side of pathway
             x = previousRow[previousRow.Count - 1];
-            //Instantiate(wall, new Vector3(x + sizeX / 2, sizeY / 2, zCoord - sizeZ), Quaternion.Euler(0, 90, 0));
             placeWall(x + sizeX / 2, zCoord - sizeZ, 270);
         }
         
@@ -206,12 +199,10 @@ public class GenMap : MonoBehaviour {
 
             //Add wall to the left side of pathway
             x = previousRow[0];
-            //Instantiate(wall, new Vector3(x - sizeX / 2, sizeY / 2, zCoord), Quaternion.Euler(0, 90, 0));
             placeWall(x - sizeX / 2, zCoord, 90);
 
             //Add wall to the right side of pathway
             x = previousRow[previousRow.Count - 1];
-            //Instantiate(wall, new Vector3(x + sizeX / 2, sizeY / 2, zCoord), Quaternion.Euler(0, 90, 0));
             placeWall(x + sizeX / 2, zCoord, 90);
 
             for (int i = previousRow[0]; i <= previousRow[previousRow.Count - 1]; i += sizeX)

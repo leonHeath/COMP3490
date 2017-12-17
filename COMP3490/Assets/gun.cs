@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class gun : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class gun : MonoBehaviour {
     public float speed;
     public float ammo;
     public float capacity = 6f;
+    public Text ammoDisplay;
 
     private AudioSource source;
     public AudioClip shotSound;
@@ -23,6 +25,7 @@ public class gun : MonoBehaviour {
     {
         source = GetComponent<AudioSource>();
         ammo = capacity;
+        SetAmmo();
     }
 
 	// Update is called once per frame
@@ -31,8 +34,6 @@ public class gun : MonoBehaviour {
         {
             source.PlayOneShot(shotSound, 1F);
             Shoot();
-            //flash.enabled = !flash.enabled;
-            //Flash ();
         }
         if (Input.GetKeyDown(KeyCode.R) && ammo < capacity)
         {
@@ -56,27 +57,17 @@ public class gun : MonoBehaviour {
         Destroy(temporaryBulletHandler, 1.0f);
 
         ammo -= 1;
+        SetAmmo();
     }
 
     void Reload()
     {
         ammo = capacity;
+        SetAmmo();
     }
 
-    //void Flash()
-    //{
-    //	Light.enabled = true;
-
-    //	}
-
-    //	Ray ray = new Ray (barrel.position, transform.forward);
-
-    //if(Physics.Raycast(ray, out hit, range))
-    //{
-    //	if (hit.collider.tag == "Enemy") 
-    //	{
-    //		Enemy enemy = hit.collider.GetComponent<Enemy> ();
-    //		enemy.health -= 1;
-    //	}
-    //}
+    void SetAmmo()
+    {
+        ammoDisplay.text = ammo.ToString() + "| " + capacity.ToString();
+    }
 }

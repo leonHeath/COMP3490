@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -61,6 +62,10 @@ public class PlayerController : MonoBehaviour {
     {
         health--;
         setHealthBar();
+
+		if (health <= 0.0) {
+			SceneManager.LoadScene (3); //quit scene
+		}
     }
 
     void setHealthBar()

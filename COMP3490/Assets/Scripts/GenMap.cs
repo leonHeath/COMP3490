@@ -29,6 +29,7 @@ public class GenMap : MonoBehaviour {
 
     void Start()
     {
+		seed = UserData.getUserName ();
         GenerateMap();
     }
 
@@ -41,7 +42,7 @@ public class GenMap : MonoBehaviour {
     {
         Debug.Log("Generating map");
 
-        pseudoRandom = new System.Random(seed.GetHashCode());
+		pseudoRandom = new System.Random(seed.GetHashCode());
         placeTile(0, 0);
 
         for (int x = 0; x < mapSize; x++)

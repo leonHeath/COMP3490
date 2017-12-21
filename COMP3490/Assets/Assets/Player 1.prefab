@@ -230,17 +230,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a28b7597cf4d7e48be21308db68bdf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  health: 0
+  walkSpeed: 0
+  runSpeed: 0
   jumpSpeed: 5
   gravity: 10
   cc: {fileID: 143742944674425674}
+  healthBar: {fileID: 0}
 --- !u!114 &114879939605362344
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330620697072600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e44af8091779fcb40801d5b284353dbe, type: 3}
   m_Name: 
@@ -253,7 +256,7 @@ MonoBehaviour:
   m_TurnSmoothing: 0
   m_TiltMax: 75
   m_TiltMin: 45
-  m_LockCursor: 0
+  m_LockCursor: 1
   m_VerticalAutoReturn: 0
 --- !u!124 &124348613331514672
 Behaviour:
